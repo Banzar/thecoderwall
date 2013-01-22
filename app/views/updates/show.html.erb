@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Subject:</b>
+  <%= @update.subject %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= @update.link %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @update.text %>
+</p>
+
+
+<%= link_to 'Edit', edit_update_path(@update) %> |
+<%= link_to 'Back', updates_path %>

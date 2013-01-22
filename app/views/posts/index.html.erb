@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Programming Blog, programmers, programming questions, programming help" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1><a href="/">The Coder Wall</a></h1>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="menu">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li class="current_page_item"><a href="/posts">Blog</a></li>
+			<li><a href="/videos">Videos</a></li>
+			<li><a href="/tutorials">Tutorials</a></li>
+			<li><a href="/projects">My Software</a></li>
+			<li class="last"><a href="mailto:info@thecoderwall.net" target="_blank">Contact</a></li>
+		</ul>
+	</div>
+	<div id="two-columns">
+		<div class="content">
+			<div id="column1">
+
+			</div>
+			<div id="columnA">
+				<h1>Listing posts</h1>
+
+				<table width="950">
+					<tr>
+						<th width="200">Subject</th>
+						<th>Text</th>
+						<th></th>
+						<th></th>
+						<th></th>
+					</tr>
+
+				<% @posts.each do |post| %>
+					<tr>
+						<td><%= link_to "#{post.subject}", post %></td>
+						<td><%= post.text %></td>
+						<td><%= link_to 'Edit', edit_post_path(post) %></td>
+						<td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+					</tr>
+				<% end %>
+				</table>
+			</div>
+			<%= link_to 'New Post', new_post_path %>
+		</div>
+	</div>
+	<div id="footer">
+		<p>Copyright (c) 2012 Thecoderwall.net. All rights reserved.</p>
+	</div>
+	
+</div>
+</body>
+</html>
