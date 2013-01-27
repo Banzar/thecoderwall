@@ -1,5 +1,46 @@
-<h1>New post</h1>
+<html>
+<head>
+<title>Post New Blog</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="<%= @post.subject %>, <%= @post.text %>" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1><a href="/">The Coders Wall</a></h1>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="menu">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/posts">Blog</a></li>
+			<li><a href="/videos">Videos</a></li>
+			<li><a href="/tutorials">Tutorials</a></li>
+			<li><a href="/projects">My Software</a></li>
+			<li class="last"><a href="#">Contact</a></li>
+		</ul>
+	</div>
+	<div id="two-columns">
+		<div class="content">
+			<div id="col1">
+				<h1>New post</h1>
 
-<%= render 'form' %>
+				<%= render 'form' %>
 
-<%= link_to 'Back', posts_path %>
+				<%= link_to 'Back', posts_path %>
+
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<p>Copyright (c) 2012 Thecoderwall.net. All rights reserved.</p>
+	</div>
+	
+</div>
+</body>
+</html>

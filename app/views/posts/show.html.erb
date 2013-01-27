@@ -1,6 +1,6 @@
 <html>
 <head>
-<title><%= @post.subect %></title>
+<title><%= @post.subject %></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="<%= @post.subject %>, <%= @post.text %>" />
 <meta name="description" content="" />
@@ -27,37 +27,17 @@
 	</div>
 	<div id="two-columns">
 		<div class="content">
-			<div id="blog_left">
+			<div id="col1">
 				<p id="notice"><%= notice %></p>
 
 				<p>
 					<h1><%= @post.subject %></h1>
 				</p>
 				<p>
-					<%= @post.text %>
+					<%=raw @post.text %>
 				</p>
 				<%= link_to 'Back', posts_path %>
-			</div>
-			<div id="blog_right">
-				<h1>Comments</h1>
-				<% @post.comments.each do |comment| %>
-				<div class="list-style1">
-					<li>
-						<p>
-							Name: <%= comment.name %><br>
-							<%= comment.text %><br>
-							<%= time_ago_in_words comment.created_at %> ago.<br>
-						</p>
-					</li>
-				<% end %>
 
-				<%= form_for [@post, @post.comments.build] do |f| -%>
-					<p>Name:</p>
-					<p><%= f.text_field :name, :size => '40X10' %></p>
-					<p>Comment:</p>
-					<p><%= f.text_area :text %></p>
-					<p><%= f.submit "Post Comment" %></p>
-				<% end %>
 			</div>
 		</div>
 	</div>

@@ -1,9 +1,8 @@
 <html>
 <head>
-<title>Programming Blog</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Programming Blog, programmers, programming questions, programming help" />
-<meta name="description" content="" />
+<meta name="keywords" content="software, C#, Ruby, programming tools, change text quickly, text replace, quick text" />
+<meta name="description" content="This is a compialation of the programs I have created" />
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css" />
 <link href="default.css" rel="stylesheet" type="text/css" media="all" />
 </head>
@@ -11,14 +10,14 @@
 <div id="wrapper">
 	<div id="header">
 		<div id="logo">
-			<h1><a href="/">The Coder Wall</a></h1>
+			<h1><a href="/">The Coders Wall</a></h1>
 		</div>
 	</div>
 	<!-- end #header -->
 	<div id="menu">
 		<ul>
 			<li><a href="/">Home</a></li>
-			<li class="current_page_item"><a href="/posts">Blog</a></li>
+			<li><a href="/posts">Blog</a></li>
 			<li><a href="/videos">Videos</a></li>
 			<li><a href="/tutorials">Tutorials</a></li>
 			<li><a href="/projects">My Software</a></li>
@@ -27,30 +26,14 @@
 	</div>
 	<div id="two-columns">
 		<div class="content">
-			<div id="column1">
-
-			</div>
 			<div id="columnA">
-				<h1>Listing posts</h1>
-
-				<table width="950">
-					<tr>
-						<th width="200">Subject</th>
-						<th>Text</th>
-						<th></th>
-						<th></th>
-						<th></th>
-					</tr>
-
-				<% @posts.each do |post| %>
-					<tr>
-						<td><%= link_to "#{post.subject}", post %></td>
-						<td><%= truncate(post.text, :length => 70).gsub(/<h1>/, "") %></td>
-					</tr>
-				<% end %>
-				</table>
+				<h1>Dayage.rb</h1>
+				<p>I created this, and plan on making one with a actual user interface. But for those of you that don't mind the classics, here is a command line version of this program. You won't need to download it, just copy the code and create the dayage.rb file so that you can save it and run it.</p>
 			</div>
-			<%= link_to 'New Post', new_post_path %>
+			<div id="columnB">
+				<img src="/assets/Projects/dayage.png">
+				<p><a href="https://github.com/Banzar/rubycode/blob/master/dayage.rb" class="link-style">Get from Github</a></p>
+			</div>
 		</div>
 	</div>
 	<div id="footer">
