@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-	http_basic_authenticate_with :name => ENV["name"], :password => ENV["password"], :only => "new" and "edit"
+	http_basic_authenticate_with :name => ENV["name"], :password => ENV["password"], :only => ["new", "edit"]
 
 
   # GET /posts
